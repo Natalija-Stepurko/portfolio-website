@@ -1,6 +1,6 @@
 # Portfolio site
 
-Source of [natalija-stepurko.github.io/portfolio-website](https://natalija-stepurko.github.io/portfolio-website/).
+Source of [natalija-stepurko.com](https://natalija-stepurko.com/) (served by GitHub Pages; also reachable at natalija-stepurko.github.io/portfolio-website).
 
 `index.html` is the complete page, ready to serve as a static site. It is self-contained
 (styles, figures and data are inline); the only external resource is Google Fonts.
@@ -24,13 +24,13 @@ git push
 
 or drag the file onto the repository page on GitHub and commit.
 
-## Custom domain (optional)
+## Custom domain
 
-In the repository's **Settings → Pages**, enter the domain under **Custom domain** and
-save (GitHub adds a `CNAME` file to the repo). At the registrar add a `CNAME` record
-pointing `www` (or the bare domain via ALIAS/ANAME) to `natalija-stepurko.github.io`.
-Tick **Enforce HTTPS** once the certificate appears. Then update the `og:url` meta tag
-in `index.html` to the new address.
+The site is served at `natalija-stepurko.com`. The `CNAME` file in this repository tells
+GitHub Pages which domain to answer for; do not delete it. DNS is managed at Namecheap:
+four `A` records on `@` pointing at GitHub's Pages addresses and a `CNAME` record on
+`www` pointing at `natalija-stepurko.github.io`. **Enforce HTTPS** is ticked in
+Settings → Pages.
 
 ## Notes
 
