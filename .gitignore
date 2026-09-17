@@ -1,0 +1,8 @@
+# Internal session notes — not for the public repo
+portfolio-session-handover.md
+# claude.ai artifact source; index.html is the same page wrapped as a full document
+portfolio-artifact-source.html
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
