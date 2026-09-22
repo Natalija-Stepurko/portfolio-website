@@ -6,3 +6,5 @@ portfolio-artifact-source.html
 .DS_Store
 Thumbs.db
 desktop.ini
+# source of the Open Graph card image (og-image.png is generated from it)
+og-card-source.html
