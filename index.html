@@ -216,7 +216,12 @@ footer{padding-block:28px 48px;font-family:var(--mono);font-size:.72rem;color:va
 .q .qlinks a{color:var(--accent-ink);white-space:nowrap}
 
 /* draft-build v3: repositioning (outputs index, step tiles, collapsible descriptions) */
-.role-line{font-family:var(--display);font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.3;color:var(--accent-ink);margin-top:-10px}
+.role-line{font-family:var(--display);font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.3;color:var(--accent-ink)}
+header{align-items:stretch}
+header h1{grid-column:1/-1;margin-bottom:-8px}
+header .hero-stack{justify-content:space-between;gap:14px}
+header .lede{font-size:clamp(1.15rem,2.2vw,1.4rem);line-height:1.42}
+@media(max-width:980px){header{grid-template-columns:minmax(0,1fr)}header .hero-stack{justify-content:flex-start}}
 .project.single{grid-template-columns:minmax(0,1fr)}
 .finding{background:var(--accent-wash);border-left:3px solid var(--accent);padding:11px 16px 12px;display:flex;flex-direction:column;gap:6px}
 .finding .label{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);font-weight:500}
@@ -274,8 +279,8 @@ footer{padding-block:28px 48px;font-family:var(--mono);font-size:.72rem;color:va
     <a data-goatcounter-click="linkedin-header" href="https://www.linkedin.com/in/natalija-stepurko" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>LinkedIn</a>
     <a data-goatcounter-click="scholar-header" href="https://scholar.google.com/citations?hl=en&amp;user=d1tbuygAAAAJ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3 2 9l10 6 10-6-10-6Z"/><path d="M6 11.5V17c0 1.5 3 3 6 3s6-1.5 6-3v-5.5"/></svg>Google Scholar</a>
   </div>
+  <h1>Natalija Stepurko</h1>
   <div class="hero-stack">
-    <h1>Natalija Stepurko</h1>
     <p class="role-line">Scientific machine-learning researcher and computational structural biologist</p>
     <p class="lede">I study what molecular and materials foundation models encode, where that information appears through network depth, and whether it carries beyond what they were trained to predict. Before this I did a Cambridge PhD modelling flexible proteins with molecular dynamics and synchrotron data, and co-founded and led two deep-tech startups.</p>
   </div>
