@@ -249,7 +249,7 @@ header .lede{font-size:clamp(1.15rem,2.2vw,1.4rem);line-height:1.42}
 #outputs{padding-block:40px 44px}
 #outputs .sec-head{grid-template-columns:minmax(0,1fr);margin-bottom:24px}
 .outputs{border:1px solid var(--rule);background:var(--panel)}
-.out-row{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1.2fr) minmax(0,1.35fr);gap:4px 24px;align-items:baseline;padding:13px 20px;border-top:1px solid var(--rule-2)}
+.out-row{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1.15fr) minmax(0,1fr) minmax(0,1.1fr);gap:4px 24px;align-items:baseline;padding:13px 20px;border-top:1px solid var(--rule-2)}
 .out-row:first-child{border-top:0}
 .out-row .name{font-family:var(--display);font-size:.98rem;line-height:1.3;color:var(--ink);border:0}
 .out-row .name::after{content:" \2193";font-family:var(--mono);font-size:.75rem;color:var(--accent-ink)}
@@ -259,6 +259,10 @@ header .lede{font-size:clamp(1.15rem,2.2vw,1.4rem);line-height:1.42}
 .out-row .outs a{color:var(--accent-ink)}
 .out-row .outs a::after{content:" \2197";font-size:.7rem}
 .out-row .outs .note{color:var(--ink-3)}
+.out-row .tools{font-family:var(--mono);font-size:.72rem;color:var(--ink-2);line-height:1.5}
+.out-row.out-head{padding-block:9px;background:var(--panel-2)}
+.out-row.out-head span{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+@media(max-width:820px){.out-row.out-head{display:none}}
 @media(max-width:820px){.out-row{grid-template-columns:minmax(0,1fr);gap:3px;padding:13px 16px}}
 </style>
 
@@ -297,11 +301,12 @@ header .lede{font-size:clamp(1.15rem,2.2vw,1.4rem);line-height:1.42}
     <div class="stack"><span class="eyebrow">At a glance</span><h2>Projects and their outputs</h2></div>
   </div>
   <div class="outputs">
-    <div class="out-row"><a class="name" href="#mlip-probing-card">Out-of-training properties in frozen interatomic-potential embeddings are decodable and ordered by physical scale</a><span class="ctx">Paper accepted · AI4Sci and AI4Mat workshops, NeurIPS 2026</span><span class="outs"><span class="note">paper, code and datasets public on 9 November 2026</span></span></div>
-    <div class="out-row"><a class="name" href="#seq-structure-card">Do a sequence model and a structure model learn the same biology?</a><span class="ctx">Proteins · representation convergence</span><span class="outs"><a data-goatcounter-click="out-protein-results" href="https://natalija-stepurko.github.io/seq-structure-convergence/" target="_blank" rel="noopener">Results</a><a data-goatcounter-click="out-protein-code" href="https://github.com/Natalija-Stepurko/seq-structure-convergence" target="_blank" rel="noopener">Code</a><a data-goatcounter-click="out-protein-data" href="https://huggingface.co/datasets/NatalijaStepurko/seq-structure-convergence" target="_blank" rel="noopener">Data</a></span></div>
-    <div class="out-row"><a class="name" href="#small-data-card">Choosing a train/test regime when data is limited</a><span class="ctx">Materials · statistics of small data</span><span class="outs"><a data-goatcounter-click="out-traintest-results" href="https://claude.ai/artifact/WmtAvuysTSAh517Zs4kqY1" target="_blank" rel="noopener">Results</a></span></div>
-    <div class="out-row"><a class="name" href="#phd-card">Molecular insights into signalling mechanisms within the TGF-β superfamily</a><span class="ctx">PhD in Biochemistry · University of Cambridge</span><span class="outs"><a data-goatcounter-click="out-phd-thesis" href="https://doi.org/10.17863/CAM.99087" target="_blank" rel="noopener">Thesis</a></span></div>
-    <div class="out-row"><a class="name" href="#biobank-card">Deciding which microbes to keep: sequence identification of a marine biobank</a><span class="ctx">Bioinformatics · built for BravelyCultured</span><span class="outs"><span class="note">code private (company data)</span></span></div>
+    <div class="out-row out-head"><span>Project</span><span>Models &amp; tools</span><span>Context</span><span>Outputs</span></div>
+    <div class="out-row"><a class="name" href="#mlip-probing-card">Where Material-Property Information Resides in Frozen Interatomic Potentials</a><span class="tools">ORB-v3 · UMA-S · XGBoost &amp; linear probes · PyTorch</span><span class="ctx">Paper accepted · AI4Sci and AI4Mat workshops, NeurIPS 2026</span><span class="outs"><span class="note">paper, code and datasets public on 9 November 2026</span></span></div>
+    <div class="out-row"><a class="name" href="#seq-structure-card">Do a sequence model and a structure model learn the same biology?</a><span class="tools">ESM-2 · ProteinMPNN · CKA · SVCCA · PyTorch</span><span class="ctx">Proteins · representation convergence</span><span class="outs"><a data-goatcounter-click="out-protein-results" href="https://natalija-stepurko.github.io/seq-structure-convergence/" target="_blank" rel="noopener">Results</a><a data-goatcounter-click="out-protein-code" href="https://github.com/Natalija-Stepurko/seq-structure-convergence" target="_blank" rel="noopener">Code</a><a data-goatcounter-click="out-protein-data" href="https://huggingface.co/datasets/NatalijaStepurko/seq-structure-convergence" target="_blank" rel="noopener">Data</a></span></div>
+    <div class="out-row"><a class="name" href="#small-data-card">Choosing a train/test regime when data is limited</a><span class="tools">ORB-v3 · UMA-S · XGBoost · resampling &amp; bootstrap</span><span class="ctx">Materials · statistics of small data</span><span class="outs"><a data-goatcounter-click="out-traintest-results" href="https://claude.ai/artifact/WmtAvuysTSAh517Zs4kqY1" target="_blank" rel="noopener">Results</a></span></div>
+    <div class="out-row"><a class="name" href="#phd-card">Molecular insights into signalling mechanisms within the TGF-β superfamily</a><span class="tools">SAXS · MD · FoXS · Python</span><span class="ctx">PhD in Biochemistry · University of Cambridge</span><span class="outs"><a data-goatcounter-click="out-phd-thesis" href="https://doi.org/10.17863/CAM.99087" target="_blank" rel="noopener">Thesis</a></span></div>
+    <div class="out-row"><a class="name" href="#biobank-card">Deciding which microbes to keep: sequence identification of a marine biobank</a><span class="tools">Biopython · BLAST · MAFFT · IQ-TREE</span><span class="ctx">Bioinformatics · built for BravelyCultured</span><span class="outs"><span class="note">code private (company data)</span></span></div>
   </div>
 </section>
 
@@ -313,9 +318,15 @@ header .lede{font-size:clamp(1.15rem,2.2vw,1.4rem);line-height:1.42}
 <article class="project" id="mlip-probing-card">
       <div class="body">
         <div class="kicker"><b>Materials · representation probing</b><span>Paper accepted · AI4Sci and AI4Mat workshops, NeurIPS 2026</span></div>
-        <h3>Out-of-training properties in frozen interatomic-potential embeddings are decodable and ordered by physical scale</h3>
-        <p>Universal interatomic potentials such as ORB-v3 and UMA-S are trained on DFT energies, forces and stresses. I probed their layer-wise embeddings across 154,875 Materials Project structures and nine properties to ask what else these models had to learn to get the energies right. Five properties absent from the training objective, including band gap, bulk modulus and magnetic character, are decodable, and the information is organised by physical scale: composition-linked properties are readable at the input, while properties that depend on long-range atomic arrangement are assembled through message passing. The equivariant model's angular channels give it a clear edge on crystal-system classification.</p>
+        <h3>Where Material-Property Information Resides in Frozen Interatomic Potentials</h3>
+        <p>Machine-learning interatomic potentials are trained only on energies, forces and stresses. I probed the frozen, layer-wise embeddings of two architecturally opposite models, ORB-v3 and UMA-S, across 154,875 Materials Project structures and nine properties. Properties absent from the training objective are recoverable, with substantial improvements over composition-only descriptors for several targets: band-gap R² rises from 0.698 with Magpie to 0.890 with ORB-v3 and 0.907 with UMA-S.</p>
         <div class="finding"><span class="label">Finding</span><p>The representations are not universally useful in the same way: different properties are most accessible at different network depths and through different representation components.</p></div>
+        <ul>
+          <li>Local and additive properties, including density and bulk modulus, tend to be most decodable in early representations, whereas band gap and metal/insulator character benefit from deeper layers.</li>
+          <li>UMA's angular features provide a substantial advantage for crystal-system classification under this evaluation protocol, even after accounting for the orientation artefact.</li>
+          <li>Useful property information can be recovered by supervised probes and nearest-neighbour prediction even when the embeddings do not form clearly separated property-specific clusters.</li>
+        </ul>
+        <p>Together, the usefulness of a frozen MLIP representation depends on what is extracted, at which layer, and for which downstream task.</p>
         <div class="method"><b>Method</b>Frozen forward passes cached per layer · gradient-boosted and linear probes · Magpie composition-only baseline · permutation and shuffled-label controls · unsupervised clustering set against supervised decodability</div>
         <div class="stack-tags"><span class="chip">PyTorch</span><span class="chip">equivariant &amp; non-equivariant GNNs</span><span class="chip">frozen-embedding extraction, 155k structures</span><span class="chip">XGBoost &amp; ridge probes</span><span class="chip">scikit-learn</span><span class="chip">pymatgen · matminer</span><span class="chip">UMAP · HDBSCAN</span><span class="chip">bootstrap CIs · permutation nulls</span></div>
       </div>
