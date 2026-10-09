@@ -8,3 +8,5 @@ Thumbs.db
 desktop.ini
 # source of the Open Graph card image (og-image.png is generated from it)
 og-card-source.html
+linkedin-banner-source.html
+linkedin-banner-plain-source.html
